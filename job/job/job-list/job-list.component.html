@@ -1,0 +1,47 @@
+<br>
+<br>
+<div class="container-fluid">
+    <h2>Job List</h2>
+    <form>
+        <input type="search"
+        (ngModelChange)="searchJob(key.value)"
+        #key="ngModel"
+        ngModel
+        name="key"
+        id="job_location"
+        placeholder="Search By Location"
+        required
+        >
+    </form>
+ <div class="row" >
+  
+        
+        <div class="column" *ngFor="let j of jobs">
+            <!-- class="d-flex flex-wrap" -->
+            <div  style="width: 25rem;">
+                <div class="card m-3 p-2" >
+                    <div class="card-body">
+                    <dl>
+                        <dt>Job-ID</dt>
+                        <dd>{{j.jobId}}</dd>
+                        <dt>Job Title</dt>
+                        <dd>{{j.job_title}}</dd>
+                        <dt>Experience Required</dt>
+                        <dd>{{j.job_exp_years}}</dd>
+                        <dt>Job Description</dt>
+                        <dd>{{j.job_description}}</dd>
+                        <dt>Job Location</dt>
+                        <dd>{{j.job_location}}</dd>
+                        <dt>Last Date</dt>
+                        <dd>{{j.last_date_apply}}</dd>
+        
+                    </dl>
+                           <button class="btn btn-success"(click)="applyjob()" >Apply Here</button>
+                    </div>
+                </div>
+        </div>
+        
+    
+    </div>
+    
+</div>

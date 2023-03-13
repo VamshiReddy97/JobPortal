@@ -1,0 +1,15 @@
+<h2>Candidates Employement History</h2>
+<table class="table table-striped table-light" id="ceh">
+    <tr>
+        <th>Can Emp History ID</th>
+        <th>Joining Date</th>
+        <th>Relieving Date</th>
+        <th>Review</th>
+    </tr>
+    <tr *ngFor="let c of cehs">
+        <td>{{c.cehId}}</td>
+        <td>{{c.joiningDate}}</td>
+        <td>{{c.relievingDate}}</td>
+        <td>{{c.review}}</td>
+    </tr>
+</table>

@@ -1,0 +1,36 @@
+<div class="outer-container">
+    <div class="inner-container" >
+      <div class="centered-content" >
+        <h1 style="color: blue">Admin Registration</h1>
+<form [formGroup]="registerAdmin" #adminobj (ngSubmit)="saveAdmin()">
+    <table class="table table-bordered">
+        <tr>
+            <td>Enter Admin Id</td>
+            <td> <input type="text" formControlName="admin_id"/> </td>
+        </tr>
+        <tr>
+            <td>Enter Admin Name</td>
+            <td> <input type="text" formControlName="admin_name"/> </td>
+        </tr>
+        <tr>
+            <td>Enter Email Id</td>
+            <td> <input type="text" formControlName="emailId"/> </td>
+        </tr>
+        <tr>
+            <td>Enter UserName</td>
+            <td> <input type="text" formControlName="username"/> </td>
+        </tr>
+        <tr>
+            <td>Enter Password</td>
+            <td> <input type="password" formControlName="password"/> </td>
+        </tr>
+         <tr>
+            <td><button class="btn btn-success">Register</button></td>
+        </tr>
+
+
+    </table>
+</form>
+</div>
+</div>
+</div>

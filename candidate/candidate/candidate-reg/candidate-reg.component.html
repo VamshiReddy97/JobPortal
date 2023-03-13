@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="row" >
+      <div class="col-md-4" >
+        <div class="card">
+            <div class="text-center">
+        <h2 style="color: blue">Candidate Registration</h2>
+<form [formGroup]="registerCandidate" #candidateobj (ngSubmit)="saveCandidate()">
+    <table class="table table-bordered">
+        
+        <tr>
+            <td>FirstName</td>
+            <td> <input type="text" formControlName="candidateFirstname"/> </td>
+        </tr>
+        <tr>
+            <td>MiddleName</td>
+            <td> <input type="text" formControlName="candidateMiddlename"/> </td>
+        </tr>
+        <tr>
+            <td>LastName</td>
+            <td> <input type="text" formControlName="candidateLastname"/> </td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td> <input type="text" formControlName="candidateEmail"/> </td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td> <input type="text" formControlName="username"/> </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td> <input type="password" formControlName="cpassword"/> </td>
+        </tr>
+        <tr>
+            <td>DOB</td>
+            <td> <input type="text" formControlName="candidate_dob"/> </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td> <input type="text" formControlName="candidate_gender"/> </td>
+        </tr>
+        <tr>
+            <td>Address </td>
+            <td> <input type="text" formControlName="candidateAddress"/> </td>
+        </tr>
+        <tr>
+            <td>Experience Years</td>
+            <td> <input type="text" formControlName="candidate_exp_years"/> </td>
+        </tr>
+        <tr>
+            <td>Experience Months</td>
+            <td> <input type="text" formControlName="candidate_exp_months"/> </td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td> <input type="text" formControlName="candidateCity"/> </td>
+        </tr>
+        <tr>
+            <td>Pincode</td>
+            <td> <input type="number" formControlName="candidatePincode"/> </td>
+        </tr>
+        <tr>
+            <td>Mobile NO</td>
+            <td><input type="number" formControlName="candidateMobileno"> </td>
+        </tr>
+        <tr>
+            <td>Upload CV</td>
+            <td><input type="file" class="form-control" (change)="onSelectFile($event)"> </td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-success">Register</button></td>
+        </tr>
+
+
+    </table>
+</form>
+</div>
+</div>
+</div>
+</div>

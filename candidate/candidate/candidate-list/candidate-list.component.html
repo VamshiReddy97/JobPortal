@@ -1,0 +1,51 @@
+<h2>Candidate List</h2>
+<table class="table table-striped table-light" id="candidate">
+<tr>
+    <th>Id</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Email</th>
+    <th>Exp Years</th>
+    <th>Exp Months</th>
+    <th>Mobile No</th>
+    <th>CV</th>
+    <th>Action</th>
+    
+</tr>
+<tr *ngFor="let candidate of candidates">
+    <td>{{candidate.candidateId}}</td>
+    <td>{{candidate.candidateFirstname}}</td>
+    <td>{{candidate.candidateLastname}}</td>
+    <td>{{candidate.candidateEmail}}</td>
+    <td>{{candidate.candidate_exp_years}}</td>
+    <td>{{candidate.candidate_exp_months}}</td>
+    <td>{{candidate.candidateMobileno}}</td>
+    <td>
+        <!-- <button class="btn btn-success" (click)="view('candidateCV')">View/Download</button> -->
+
+        <a class="btn" (click)="view('candidateCV')"></a>
+        <i class="fa fa-download" aria-hidden="true" style='font: size 60px;color:blue'
+
+        ></i>
+    </td>
+    <td>
+        <a class="btn">
+            <i class="fa fa-pencil-square-o" aria-hidden="true" style='font: size 40px;color:green' (click)="editCandidate(candidate.candidateId)"></i>
+        </a>
+        <a class="btn" (click)="deletecandidate(candidate.candidateId)">
+            <i class="fa fa-trash" aria-hidden="true" style='font-size:25px;color:red'></i>
+        </a>
+    </td>
+
+</tr>
+</table>
+<div >
+
+</div>
+
+<div class="container">
+    <div class="col-md-12">
+        <img [src]="">
+    </div>
+
+</div>

@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+  <a class="navbar-brand" href="#">JOB-PORTAL</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav" style="height: 4rem;">
+        <li class="nav-item">
+          <a class="nav-link p-3" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link p-3" [routerLink]="['/employer-login']">Employer Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link p-3 " [routerLink]="['/candidate-login']" >Login</a>
+        </li>
+        <li class="nav-item">
+          <a class=" nav-link p-3" [routerLink]="['/admin-login']" >Admin-Login</a>
+        </li>
+      </ul>      
+    </div>
+<div class="d-flex">
+  <button class="btn btn-danger mx-2" [routerLink]="['']" >Logout</button>
+</div>  
+</nav>
+<router-outlet></router-outlet>
