@@ -1,0 +1,39 @@
+&nbsp;
+<h2>Jobs Applied</h2>
+<table class="table table-bordered table-light" id="jobapp">
+    <tr>
+        <th>Job Application Id</th>
+        <th>Job Title</th>
+        <th>Job Description</th>
+        <th>Candidate ID</th>
+        <th>Job Id</th>
+        <th>Date of Application</th>
+        <th>Message</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr *ngFor="let jobapp of jobapplied">
+        <td>{{jobapp.jobappId}}</td>
+        <td>{{jobapp.job.job_title}}</td>
+        <td>{{jobapp.job.job_description}}</td>
+        <td>{{jobapp.candidate.candidateId}}</td>
+        <td>{{jobapp.job.jobId}}</td>
+        <td>{{jobapp.date_applied}}</td>
+        <td>{{jobapp.msg}}</td>
+        <td>
+            <a class="btn">
+                <i  data-toggle="modal" data-target="#exampleModal"  class="fa fa-pencil-square-o" aria-hidden="true"  style='font: size 40px;color:green' 
+                
+                ></i>
+            </a>
+        </td>
+        <td>
+            <a class="btn" >
+                <i class="fa fa-trash" aria-hidden="true" style='font-size:25px;color:red'></i>
+            </a>
+        </td>
+    </tr>
+    </table>
+    <div >
+    </div>
+    

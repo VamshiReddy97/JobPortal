@@ -1,0 +1,42 @@
+<div class="pt-5">  
+    <div class="global-container">  
+      <div class="card login-form">  
+      <div class="card-body">  
+<h2>Job Application</h2>
+<div>
+    <form>
+        <div class="form-group">
+            <label for="jobappId" class="form-label" > Job Application Id</label>
+        <input class="form-control" type="number"  name="jobappId" [(ngModel)]="jobapplication.jobappId">
+        </div>
+        <div>
+            <label for="employer" class="form-label">Candidate Id</label>
+            <select [(ngModel)]="jobapplication.candidate" class="form-control" name="candidate" >
+                <option [ngValue]="undefined">----Select Candidate Id----</option>
+                <option *ngFor="let candidate of candidates" [ngValue]="candidate">{{candidate.candidateId}}</option>
+            </select>
+            
+        </div>
+        <div class="form-group" >
+            <label for="employer" class="form-label">Job Id</label>
+            <select [(ngModel)]="jobapplication.job" class="form-control" name="candidate" >
+                <option [ngValue]="undefined">----Select Job Id----</option>
+                <option *ngFor="let job of jobs" [ngValue]="job">{{job.jobId}}</option>
+            </select>
+            
+        </div>
+    
+        <div class="form-group">
+            <label>Date of Application</label>
+            <input class="form-control" name="date_applied" [(ngModel)]="jobapplication.date_applied" >
+        </div>
+        <div class="form-group">
+            <label>Send Message</label>
+            <textarea class="form-control" type="text-area"  name="msg" rows="3" cols="20" [(ngModel)]="jobapplication.msg"></textarea>
+        </div>
+    <button class="btn btn-success" (click)="applyjob()">Apply</button>
+    </form>
+</div>
+</div>
+</div>
+</div>
